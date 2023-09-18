@@ -14,5 +14,14 @@ public class Program {
         for (Employee item : employees) {
             System.out.println(item);
         }
+        employees.sort(new EmployeeComparator());
+        System.out.println();
+        for (Employee item : employees) {
+            System.out.println(item);
+        }
+        System.out.println();
+        ListEmployee employees2 = new ListEmployee();
+        employees2.add(10);
+        employees2.printListEmployee();
     }
 }

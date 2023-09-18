@@ -54,11 +54,23 @@ public abstract class Employee {
         id = ++counter;
     }
 
+    /**
+     * Конструктор по умолчанию
+     */
     public Employee() {
         this("#name#", "#serName#", 0);
     }
 
+    /**
+     * Конструктор
+     * @param name имя сотрудника
+     * @param surName фамилия сотрудника
+     * @param salary ставка заработной платы сотрудника
+     */
     public Employee(String name, String surName, double salary) {
+        if (salary < 0){
+            throw new RuntimeException("Заработная плата не может быть отрицательной.");
+        }
         this.name = name;
         this.surName = surName;
         this.salary = salary;

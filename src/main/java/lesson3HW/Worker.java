@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Worker extends Employee {
+    /**
+     * Конструкто рабочего
+     * @param name имя  рабочего
+     * @param surName фамилия  рабочего
+     * @param salary ставка заработной платы  рабочего
+     */
     public Worker(String name, String surName, double salary) {
         super(name, surName, salary);
     }
@@ -23,9 +29,8 @@ public class Worker extends Employee {
         return new Worker (
                 names[random.nextInt(surNames.length)],
                 surNames[random.nextInt(surNames.length)],
-                random.nextDouble(300.0, 1500.0));
+                random.nextInt(30000, 150000));
     }
-
     /**
      * Создание заполненного списка новых сотрудников
      * @param count количество создаваемых сотрудников
